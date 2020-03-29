@@ -1,0 +1,135 @@
+"idx"   "desc"  "name"
+1	b'Human arm'	/m/0dzf4
+2	b'Human body'	/m/02p0tk3
+3	b'Human ear'	/m/039xj_
+4	b'Human eye'	/m/014sv8
+5	b'Human face'	/m/0dzct
+6	b'Human hair'	/m/03q69
+7	b'Human hand'	/m/0k65p
+8	b'Human head'	/m/04hgtk
+9	b'Human leg'	/m/035r7c
+10	b'Human mouth'	/m/0283dt1
+11	b'Human nose'	/m/0k0pj
+12	b'Woman'	/m/03bt1vf
+13	b'Man'	/m/04yx4
+14	b'Person'	/m/01g317
+15	b'Mammal'	/m/04rky
+16	b'Clothing'	/m/09j2d
+17	b'Plant'	/m/05s2s
+18	b'Car'	/m/0k4j
+19	b'Wheel'	/m/083wq
+20	b'Tree'	/m/07j7r
+21	b'Auto part'	/m/08dz3q
+22	b'Flower'	/m/0c9ph5
+23	b'Food'	/m/02wbm
+24	b'Animal'	/m/0jbk
+25	b'Tire'	/m/0h9mv
+26	b'Building'	/m/0cgh4
+27	b'Girl'	/m/05r655
+28	b'Vehicle'	/m/07yv9
+29	b'Footwear'	/m/09j5n
+30	b'Land vehicle'	/m/01prls
+31	b'Dog'	/m/0bt9lr
+32	b'Sports equipment'	/m/05y5lj
+33	b'Art'	/m/0jjw
+34	b'Fashion accessory'	/m/0463sg
+35	b'Window'	/m/0d4v4
+36	b'Snack'	/m/01ww8y
+37	b'Furniture'	/m/0c_jw
+38	b'Airplane'	/m/0cmf2
+39	b'Baked goods'	/m/052lwg6
+40	b'Dessert'	/m/0270h
+41	b'Dress'	/m/01d40f
+42	b'Bird'	/m/015p6
+43	b'Boy'	/m/01bl7v
+44	b'House'	/m/03jm5
+45	b'Boat'	/m/019jd
+46	b'Table'	/m/04bcr3
+47	b'Fruit'	/m/02xwb
+48	b'Vegetable'	/m/0f4s2w
+49	b'Tableware'	/m/04brg2
+50	b'Fast food'	/m/01_bhs
+51	b'Illustration'	/m/01kr8f
+52	b'Drink'	/m/0271t
+53	b'Toy'	/m/0138tl
+54	b'Carnivore'	/m/01lrl
+55	b'Snow'	/m/06_dn
+56	b'Cat'	/m/01yrx
+57	b'Sky'	/m/01bqvp
+58	b'Water'	/m/0838f
+59	b'Chair'	/m/01mzpv
+60	b'Helmet'	/m/0zvk5
+61	b'Jeans'	/m/0fly7
+62	b'Mountain'	/m/09d_r
+63	b'Glasses'	/m/0jyfg
+64	b'Watercraft'	/m/01rzcn
+65	b'Horse'	/m/03k3r
+66	b'Ship'	/m/06q74
+67	b'Suit'	/m/01xyhv
+68	b'Shoe'	/m/06rrc
+69	b'Insect'	/m/03vt0
+70	b'Bicycle'	/m/0199g
+71	b'Outerwear'	/m/047vlmn
+72	b'Trousers'	/m/07mhn
+73	b'Bicycle wheel'	/m/01bqk0
+74	b'Drawing'	/m/02csf
+75	b'Bottle'	/m/04dr76w
+76	b'Invertebrate'	/m/03xxp
+77	b'Poster'	/m/01n5jq
+78	b'Dance'	/m/026bk
+79	b'Sculpture'	/m/06msq
+80	b'Door'	/m/02dgv
+81	b'Aircraft'	/m/0k5j
+82	b'Musical instrument'	/m/04szw
+83	b'Statue'	/m/013_1c
+84	b'Jacket'	/m/032b3c
+85	b'Cloud'	/m/0csby
+86	b'Tower'	/m/01fdzj
+87	b'Cartoon'	/m/0215n
+88	b'Sunglasses'	/m/017ftj
+89	b'Painting'	/m/05qdh
+90	b'Reef'	/m/01jypq
+91	b'Desk'	/m/01y9k5
+92	b'Hat'	/m/02dl1y
+93	b'Toddler'	/m/01bgsw
+94	b'Smile'	/m/019nj4
+95	b'Screenshot'	/m/01zbnw
+96	b'Swimming'	/m/06z6r
+97	b'Guitar'	/m/0342h
+98	b'Palm tree'	/m/0cdl1
+99	b'Book'	/m/0bt_c3
+100	b'Baby'	/m/0jnvp
+101	b'Sketch'	/m/07glzq
+102	b'Train'	/m/07jdr
+103	b'Bus'	/m/01bjv
+104	b'Piano'	/m/05r5c
+105	b'Microphone'	/m/0hg7b
+106	b'Birthday cake'	/m/02czv8
+107	b'Beach'	/m/0b3yr
+108	b'Lake'	/m/04h4w
+109	b'Soft drink'	/m/06qrr
+110	b'Butterfly'	/m/0cyf8
+111	b'Soccer'	/m/02vx4
+112	b'T-shirt'	/m/013s93
+113	b'Skyscraper'	/m/079cl
+114	b'Laptop'	/m/01c648
+115	b'Vase'	/m/02s195
+116	b'Handwriting'	/m/0gkxy13
+117	b'Sneakers'	/m/09kjlm
+118	b'Bathroom'	/m/01j2bj
+119	b'Baseball'	/m/018jz
+120	b'Cave'	/m/01r8w
+121	b'Waterfall'	/m/0j2kx
+122	b'Basketball (Sport)'	/m/018w8
+123	b'Bride'	/m/0ltfs
+124	b'Personal computer'	/m/0643t
+125	b'Skiing'	/m/071k0
+126	b'Wedding dress'	/m/02c66t
+127	b'Fence'	/m/0blz9
+128	b'Fog'	/m/0g2z8
+129	b'Sink'	/m/0130jx
+130	b'Moon'	/m/04wv_
+131	b'Street light'	/m/033rq4
+132	b'Candle'	/m/0c06p
+133	b'Map'	/m/04_tb
+134	b'Mirror'	/m/054_l
