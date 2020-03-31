@@ -4,7 +4,7 @@ import torch.optim as optim
 import torchvision
 import torchvision.transforms as transforms
 import argparse
-from resnet18 import ResNet18
+from models.resnet18 import ResNet18
 
 #device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
