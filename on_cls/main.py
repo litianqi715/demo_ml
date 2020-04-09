@@ -28,9 +28,11 @@ data_base_dir = "D:/cifar-100/"
 ckpt_base_dir = "D:/demo_ml/checkpoint/"
 
 global best_acc_epoch
+global learning_rate
 
 # Training
 def train(epoch):
+    global learning_rate
     epoch_start = time()
     net.train()
     train_loss = 0
@@ -66,6 +68,7 @@ def train(epoch):
 def test(epoch):
     global best_acc
     global best_acc_epoch
+    global learning_rate
     net.eval()
     test_loss = 0
     correct = 0
@@ -99,6 +102,9 @@ def test(epoch):
         }
     torch.save(state, ckpt_folder+'ckpt_epoch.pth')
 
+    print("==> epoch: {}, acc: {}, best_acc: {}, best_acc_epoch: {}".format(
+        epoch, acc, best_acc, best_acc_epoch
+    ))
     if acc > best_acc:
         torch.save(state, ckpt_folder+'ckpt_epoch{}.pth'.format(epoch))
         best_acc = acc
@@ -106,6 +112,7 @@ def test(epoch):
     else:
         print("=-------{}".format(best_acc_epoch))
         if (epoch - best_acc_epoch) >= 10:
+            # BUG: lr should be global
             learning_rate = learning_rate * 0.1
             best_acc_epoch = epoch
             print("----- change learning_rate to {} due to acc pause".format(learning_rate))
@@ -113,6 +120,7 @@ def test(epoch):
 
 if __name__=="__main__":
     global best_acc_epoch
+    global learning_rate
     if torch.cuda.is_available():
         print("[+] ok")
         print("[+] gpu count: %d"%(torch.cuda.device_count()))
@@ -175,7 +183,7 @@ if __name__=="__main__":
         net = torch.nn.DataParallel(net)
         cudnn.benchmark = True
     
-    
+    args.resume = "D:/demo_ml/checkpoint/ckpt_cifar100_resnet34/ckpt_epoch27.pth"
     if args.resume is not None:
         # Load checkpoint.
         ckpt_path = args.resume
