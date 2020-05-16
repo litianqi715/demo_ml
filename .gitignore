@@ -2,3 +2,7 @@ pandas
 .pyc
 __pycache__
 log/
+checkpoint/
+data/
+survey/
+material/
