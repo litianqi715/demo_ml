@@ -12,16 +12,17 @@ import os
 import argparse
 from time import time
 import logging.config
+import logging
 
-from models import *
+from models_cls import *
 # from utils import progress_bar
 # progress_bar = print
 log_config = "logging.conf"
 log_config = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'logging.conf')
-os.chdir("on_cls")
+# os.chdir("on_cls")
 logging.config.fileConfig(log_config)
 logger = logging.getLogger('mind')
-os.chdir("..")
+# os.chdir("..")
 
 classes = ('plane', 'car', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck')
 data_base_dir = "D:/cifar-100/"
@@ -134,7 +135,7 @@ if __name__=="__main__":
     args = parser.parse_args()
     args.resume = None  # "D:/demo_ml/checkpoint/checkpoint_resnet50/ckpt_epoch113.pth"
 
-    device = 'cuda' if torch.cuda.is_available() else 'cpu'
+    device = 'cuda:0' if torch.cuda.is_available() else 'cpu'
     best_acc = 0  # best test accuracy
     start_epoch = 0  # start from epoch 0 or last checkpoint epoch
 
@@ -153,13 +154,13 @@ if __name__=="__main__":
         transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010)),
     ])
 
-    base_batch_size = 384
+    base_batch_size = 256  
     batch_size = base_batch_size * torch.cuda.device_count()
     trainset = torchvision.datasets.CIFAR100(root=data_base_dir, train=True, download=True, transform=transform_train)
     trainloader = torch.utils.data.DataLoader(trainset, batch_size=batch_size, shuffle=True, num_workers=4)
 
     testset = torchvision.datasets.CIFAR100(root=data_base_dir, train=False, download=True, transform=transform_test)
-    testloader = torch.utils.data.DataLoader(testset, batch_size=base_batch_size, shuffle=False, num_workers=1)
+    testloader = torch.utils.data.DataLoader(testset, batch_size=base_batch_size, shuffle=False, num_workers=2)
 
     # TODO: try efficient-net
     # Model
@@ -179,11 +180,11 @@ if __name__=="__main__":
     # net = SENet18()
     model_name = "resnet34"
     net = net.to(device)
-    if device == 'cuda':
+    if device == 'cuda:0':
         net = torch.nn.DataParallel(net)
         cudnn.benchmark = True
     
-    args.resume = "D:/demo_ml/checkpoint/ckpt_cifar100_resnet34/ckpt_epoch27.pth"
+    # args.resume = "D:/demo_ml/checkpoint/ckpt_cifar100_resnet34/ckpt_epoch27.pth"
     if args.resume is not None:
         # Load checkpoint.
         ckpt_path = args.resume
@@ -207,6 +208,6 @@ if __name__=="__main__":
     #     learning_rate = base_learning_rate * 0.1 * 0.1
 
     logger.info("==> Start training")
-    for epoch in range(start_epoch, start_epoch+200):
+    for epoch in range(start_epoch, max(start_epoch+50, 200)):
         train(epoch)
         test(epoch)
